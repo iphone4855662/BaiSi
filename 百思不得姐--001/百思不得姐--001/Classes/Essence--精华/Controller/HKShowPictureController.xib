@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HKShowPictureController">
+            <connections>
+                <outlet property="progressView" destination="ZzY-8h-p8m" id="uGk-bU-los"/>
+                <outlet property="scrollView" destination="0kl-68-J6P" id="HpT-is-GWA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="636"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kl-68-J6P">
+                    <frame key="frameInset" width="434" height="636"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzY-8h-p8m" customClass="HKProgressView">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="OIC-d7-z4X"/>
+                                <constraint firstAttribute="width" constant="100" id="ca3-zD-vi1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ZzY-8h-p8m" firstAttribute="centerY" secondItem="0kl-68-J6P" secondAttribute="centerY" id="Wfo-wA-ciW"/>
+                        <constraint firstItem="ZzY-8h-p8m" firstAttribute="centerX" secondItem="0kl-68-J6P" secondAttribute="centerX" id="ixZ-EM-OPB"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqg-lq-qAq" userLabel="dessmis">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="7eS-f2-y9l"/>
+                        <constraint firstAttribute="height" constant="30" id="GKp-pd-kbi"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="video-play"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="zze-fL-0Lq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcv-JU-urC">
+                    <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.47635135135135137" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="7PR-KP-OXC"/>
+                        <constraint firstAttribute="height" constant="30" id="wGH-Ts-1qC"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" red="0.99751431099999999" green="1" blue="0.95658120430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aex-9F-R8h">
+                    <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.47635135140000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="USG-R0-hsP"/>
+                        <constraint firstAttribute="height" constant="30" id="ecw-Nl-gyc"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" red="0.99751431099999999" green="1" blue="0.95658120430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="PVo-IX-XAn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qcv-JU-urC" firstAttribute="top" secondItem="aex-9F-R8h" secondAttribute="top" id="4MR-ed-FLi"/>
+                <constraint firstAttribute="bottom" secondItem="0kl-68-J6P" secondAttribute="bottom" id="EAh-5Z-CDM"/>
+                <constraint firstItem="aex-9F-R8h" firstAttribute="leading" secondItem="qcv-JU-urC" secondAttribute="trailing" constant="27" id="PhW-qD-hIl"/>
+                <constraint firstItem="Uqg-lq-qAq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="UHg-Qw-IJF"/>
+                <constraint firstItem="0kl-68-J6P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="an6-92-4in"/>
+                <constraint firstItem="Uqg-lq-qAq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="ghE-FW-M9l"/>
+                <constraint firstItem="0kl-68-J6P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lqo-KT-Vbk"/>
+                <constraint firstAttribute="trailing" secondItem="aex-9F-R8h" secondAttribute="trailing" constant="20" id="mfH-9n-f5Y"/>
+                <constraint firstAttribute="trailing" secondItem="0kl-68-J6P" secondAttribute="trailing" id="qAE-nH-LoK"/>
+                <constraint firstAttribute="bottom" secondItem="aex-9F-R8h" secondAttribute="bottom" constant="30" id="qtX-To-iJx"/>
+                <constraint firstItem="qcv-JU-urC" firstAttribute="top" secondItem="0kl-68-J6P" secondAttribute="bottom" id="rax-4s-Y5s"/>
+                <constraint firstItem="0kl-68-J6P" firstAttribute="top" secondItem="Uqg-lq-qAq" secondAttribute="bottom" id="txQ-Np-pWG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="txQ-Np-pWG"/>
+                    <exclude reference="rax-4s-Y5s"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="130" y="134"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>
